@@ -14,9 +14,10 @@ def request_method():
     return request.method
 
 
-@app.route('/show_data', methods=['POST'], filename=['*.json'])
+@app.route('/show_data', methods=['POST'])
 def show_date():
-    return str(request_info)
+    req_data = request.get_json()
+    return str(req_data)
 
 
 if __name__ == '__main__':
