@@ -9,7 +9,7 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/method')
+@app.route('/method', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def request_method():
     return f'request method: {request.method}'
 
