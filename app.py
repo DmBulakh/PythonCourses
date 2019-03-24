@@ -9,6 +9,11 @@ def hello():
     return 'Hello, World!'
 
 
+@app.route('/method')
+def request_method():
+    return f'request method: {request.method}'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
