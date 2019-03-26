@@ -11,7 +11,7 @@ def hello():
 
 @app.route('/method', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def request_method():
-    return request.method
+    return str(request.method)
 
 
 @app.route('/show_data', methods=['POST'])
