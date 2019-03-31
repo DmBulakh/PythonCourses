@@ -9,7 +9,7 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/method')
+@app.route('/method', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def request_info():
     return f'request method: {request.method}'
 
@@ -29,3 +29,4 @@ def request_info():
     return f'request method: {request.method} url: {request.url} headers: {request.headers}'
 # heroku login
 # git commit -m
+# git push heroku master
