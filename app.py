@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
 
 @app.route('/request')
-def request_info():
+def request_info1():
     return f'request method: {request.method} url: {request.url} headers: {request.headers}'
 # heroku login
 # git commit -m
