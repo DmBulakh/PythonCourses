@@ -11,7 +11,7 @@ def hello():
 
 @app.route('/method', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def request_info():
-    return str(f'request method: {request.method}')
+    return f'request method: {request.method} url: {request.url} headers: {request.headers}'
 
 
 @app.route('/show_data', methods=['POST'])
