@@ -15,7 +15,7 @@ def request_info():
 
 
 @app.route('/show_data', methods=['POST'])
-def show_date():
+def show_data_json():
     req_data = request.get_json()
     return str(req_data)
 
