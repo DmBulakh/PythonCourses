@@ -9,9 +9,9 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/method', methods=['GET', 'POST', 'PUT', 'DELETE'])
-def request_method():
-    return request.method
+@app.route('/method')
+def request_info():
+    return f'request method: {request.method}'
 
 
 @app.route('/show_data', methods=['POST'])
@@ -27,3 +27,5 @@ if __name__ == '__main__':
 @app.route('/request')
 def request_info():
     return f'request method: {request.method} url: {request.url} headers: {request.headers}'
+# heroku login
+# git commit -m
